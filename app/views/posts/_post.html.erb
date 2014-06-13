@@ -1,6 +1,7 @@
-<article>
+	<article>
         <h2><%= link_to post.title, post %></h2>
+        <%= post.created_at.strftime "%-d. %-m. %Y" %>
         <div><%= simple_format(post.text) %></div>
         <%= link_to 'Edit', edit_post_path(post) %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </article>
+    </article>
